@@ -23,9 +23,11 @@ Memegen stores all images on the local file system in the static/images and stat
 Memegen uses PIL (Python Image Library) to write text on images.
 
 Very little work needs to be done to serve this application on httpd, lighthttpd, or nginx.  However due to load requirements there is little need as no more then a handful of people will ever be using it at once.
+http://flask.pocoo.org/docs/deploying/
 
 Requirements
 ============
+All the requirements can be installed via pip
 * flask
-* PIL
+* PIL (requires libfreetype, libjpeg)
 * sqlite3
