@@ -7,7 +7,7 @@ This is designed to be drop and use as much as possible.  Designed for office us
 
 To Run:
 ```bash
-python flaskr.py
+python memegen.py
 ```
 
 Features
