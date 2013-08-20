@@ -63,7 +63,6 @@ def get_memes():
     form_data['to_upload'] = False
     return render_template('grid.html', form_data=form_data)
 
-
 @app.route('/meme', methods=['POST'])
 def post_meme():
     meme_id = dao.create_meme(get_db(),
@@ -77,7 +76,6 @@ def post_meme():
                            request.form['bottom'],
                            meme_id)
     return redirect(url_for('static', filename='memes/%d.png' % meme_id))
-
 
 @app.teardown_appcontext
 def close_connection(exception):
