@@ -25,9 +25,14 @@ Memegen uses PIL (Python Image Library) to write text on images.
 Very little work needs to be done to serve this application on httpd, lighthttpd, or nginx.  However due to load requirements there is little need as no more then a handful of people will ever be using it at once.
 http://flask.pocoo.org/docs/deploying/
 
-Requirements
+Dependencies
 ============
-All the requirements can be installed via pip
-* flask
-* PIL (requires libfreetype, libjpeg)
-* sqlite3
+All the dependencies can be installed via pip
+
+```bash
+sudo apt-get install python-pip python-dev build-essential sqlite3
+sudo pip install --no-index -f http://dist.plone.org/thirdparty/ -U PIL
+sudo pip install flask
+sudo pip install pysqlite
+```
+
