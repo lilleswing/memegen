@@ -30,7 +30,7 @@ Dependencies
 All the dependencies can be installed via pip
 
 ```bash
-sudo apt-get install python-pip python-dev build-essential sqlite3
+sudo apt-get install python-pip python-dev build-essential libsqlite3-dev sqlite3
 sudo pip install --no-index -f http://dist.plone.org/thirdparty/ -U PIL
 sudo pip install flask
 sudo pip install pysqlite
