@@ -3,8 +3,6 @@ from flask import Flask, request, session, g, redirect, url_for, \
      abort, render_template, flash
 import memegenerator
 import dao
-import hashlib
-import datetime
 
 DATABASE= 'memegen.db'
 
@@ -41,9 +39,8 @@ def get_image(image_id):
 @app.route('/image', methods=['POST'])
 def post_images():
     img = request.files['image']
-    hash_name = hashlib.sha1(str(datetime.datetime.now())).hexdigest()
-    img.save('static/images/%s' % hash_name)
-    img_id = dao.create_image(get_db(), hash_name)
+    img.save('static/images/%s' % img.filename)
+    img_id = dao.create_image(get_db(), img.filename)
     return redirect(url_for("get_image", image_id=img_id))
 
 @app.route('/meme/<int:meme_id>', methods=['GET'])

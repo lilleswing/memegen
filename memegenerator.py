@@ -31,7 +31,7 @@ def gen_meme(image_name, top, bottom, meme_id):
 
 # find bottom centered position for bottom text
     bottomTextPositionX = (imageSize[0]/2) - (bottomTextSize[0]/2)
-    bottomTextPositionY = imageSize[1] - bottomTextSize[1] - 10
+    bottomTextPositionY = imageSize[1] - bottomTextSize[1]
     bottomTextPosition = (bottomTextPositionX, bottomTextPositionY)
 
     draw = ImageDraw.Draw(img)
